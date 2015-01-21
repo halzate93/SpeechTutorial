@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test"
+        android:id="@+id/button"
+        android:onClick="testTTS"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/rate"
+        android:id="@+id/rate_tv"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="63dp"
+        android:layout_below="@+id/editText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/pitch"
+        android:id="@+id/pitch_tv"
+        android:layout_below="@+id/rate_tv"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="63dp" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rate_sb"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignTop="@+id/rate_tv"
+        android:layout_toEndOf="@+id/pitch_tv"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="51" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pitch_sb"
+        android:layout_alignTop="@+id/pitch_tv"
+        android:layout_alignStart="@+id/rate_sb"
+        android:layout_alignEnd="@+id/rate_sb"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="40" />
+
+</RelativeLayout>
